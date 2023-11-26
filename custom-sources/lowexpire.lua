@@ -4,20 +4,15 @@ local function first() end
 local function min() end
 local function max() end
 local function avg() end
-local function ifgt() end
-local function ifgte() end
-local function ifeq() end
 
 -- custom string with comments
-max(
-    expectedahmin,
-    vendorsell,
-    destroy
+min(
+    lowmin/0.8*vendorsell,
+    50000
 )
 
 -- custom string without comments
-max(
-    expectedahmin,
-    vendorsell,
-    destroy
+min(
+    lowmin/0.8*vendorsell,
+    50000
 )

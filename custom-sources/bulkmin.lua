@@ -17,16 +17,16 @@ check(
         vendorsell
     ),
     max(
-        0.25 * avg(
+        0.25*avg(
             dbminbuyout,
-            1 * dbmarket,
-            1 * dbhistorical,
-            1 * dbregionmarketavg,
-            1 * dbregionhistorical,
+            1*dbmarket,
+            1*dbhistorical,
+            1*dbregionmarketavg,
+            1*dbregionhistorical,
             dbregionsaleavg,
             crafting
         ),
-        1.1 * vendorsell
+        1.1*vendorsell
     )
 )
 
@@ -43,15 +43,15 @@ check(
         vendorsell
     ),
     max(
-        0.25 * avg(
+        0.25*avg(
             dbminbuyout,
-            1 * dbmarket,
-            1 * dbhistorical,
-            1 * dbregionmarketavg,
-            1 * dbregionhistorical,
+            1*dbmarket,
+            1*dbhistorical,
+            1*dbregionmarketavg,
+            1*dbregionhistorical,
             dbregionsaleavg,
             crafting
         ),
-        1.1 * vendorsell
+        1.1*vendorsell
     )
 )
