@@ -17,7 +17,10 @@ ifeq( -- if auctioning
     0, -- then return null
     ifgt( -- else, if Destroy > 1.5*VendorSell
         destroy,
-        1.5*vendorsell,
+        1.5*first(
+            vendorsell,
+            0
+        ),
         2222222222222222, -- then destroy
         0 -- else, return null
     )
@@ -33,7 +36,10 @@ ifeq(
     0,
     ifgt(
         destroy,
-        1.5*vendorsell,
+        1.5*first(
+            vendorsell,
+            0
+        ),
         2222222222222222,
         0
     )
