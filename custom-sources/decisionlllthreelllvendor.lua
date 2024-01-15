@@ -22,7 +22,12 @@ ifeq( -- if auctioning
         ),
         2222222222222222,
         0, -- then return null
-        3333333333333333 -- else, vendor
+        ifgte( -- else, if vendor ≥ 0
+            vendorsell,
+            0,
+            3333333333333333, -- then vendor
+            0 -- else, return null
+        )
     )
 )
 
@@ -41,6 +46,11 @@ ifeq(
         ),
         2222222222222222,
         0,
-        3333333333333333
+        ifgte(
+            vendorsell,
+            0,
+            3333333333333333,
+            0
+        )
     )
 )

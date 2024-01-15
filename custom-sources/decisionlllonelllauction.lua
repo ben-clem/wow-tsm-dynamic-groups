@@ -21,7 +21,10 @@ ifgte( -- if DailySold ≥ 1,000
             0
         ),
         ifgt( -- && Historical > 0.5*Destroy
-            dbhistorical,
+            first(
+                dbhistorical,
+                expectedahmin
+            ),
             0.5*first(
                 destroy,
                 0
@@ -44,7 +47,10 @@ ifgte( -- if DailySold ≥ 1,000
                 0
             ),
             ifgt( -- && Historical > 0.75*Destroy
-                dbhistorical,
+                first(
+                    dbhistorical,
+                    expectedahmin
+                ),
                 0.75*first(
                     destroy,
                     0
@@ -67,7 +73,10 @@ ifgte( -- if DailySold ≥ 1,000
                     0
                 ),
                 ifgt( -- && Historical > 2.5*Destroy
-                    dbhistorical,
+                    first(
+                        dbhistorical,
+                        expectedahmin
+                    ),
                     2.5*first(
                         destroy,
                         0
@@ -90,7 +99,10 @@ ifgte( -- if DailySold ≥ 1,000
                         0
                     ),
                     ifgt( -- && Historical > 5*Destroy
-                        dbhistorical,
+                        first(
+                            dbhistorical,
+                            expectedahmin
+                        ),
                         5*first(
                             destroy,
                             0
@@ -107,7 +119,10 @@ ifgte( -- if DailySold ≥ 1,000
                         0
                     ),
                     ifgt( -- && Historical > 10*Destroy
-                        dbhistorical,
+                        first(
+                            dbhistorical,
+                            expectedahmin
+                        ),
                         10*first(
                             destroy,
                             0
@@ -136,7 +151,10 @@ ifgte(
             0
         ),
         ifgt(
-            dbhistorical,
+            first(
+                dbhistorical,
+                expectedahmin
+            ),
             0.5*first(
                 destroy,
                 0
@@ -159,7 +177,10 @@ ifgte(
                 0
             ),
             ifgt(
-                dbhistorical,
+                first(
+                    dbhistorical,
+                    expectedahmin
+                ),
                 0.75*first(
                     destroy,
                     0
@@ -182,7 +203,10 @@ ifgte(
                     0
                 ),
                 ifgt(
-                    dbhistorical,
+                    first(
+                        dbhistorical,
+                        expectedahmin
+                    ),
                     2.5*first(
                         destroy,
                         0
@@ -205,7 +229,10 @@ ifgte(
                         0
                     ),
                     ifgt(
-                        dbhistorical,
+                        first(
+                            dbhistorical,
+                            expectedahmin
+                        ),
                         5*first(
                             destroy,
                             0
@@ -222,7 +249,10 @@ ifgte(
                         0
                     ),
                     ifgt(
-                        dbhistorical,
+                        first(
+                            dbhistorical,
+                            expectedahmin
+                        ),
                         10*first(
                             destroy,
                             0
